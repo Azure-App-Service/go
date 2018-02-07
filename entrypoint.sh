@@ -12,7 +12,7 @@ Golang quickstart: https://aka.ms/golang-qs
 EOL
 cat /etc/motd
 
-/etc/init.d/sshd start
+/usr/sbin/sshd
 
 # Get environment variables to show up in SSH session
 eval $(printenv | awk -F= '{print "export " $1"="$2 }' >> /etc/profile)

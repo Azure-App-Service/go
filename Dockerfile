@@ -18,7 +18,8 @@ RUN apk update \
     && apk add --update --no-cache openrc openssh file findutils ca-certificates \
     && rc-update add sshd \
     && chmod 755 /bin/entrypoint.sh \
-    && mkdir -p /home/LogFiles/
+    && mkdir -p /home/LogFiles/ \
+    && /usr/bin/ssh-keygen -A
 
 EXPOSE 2222 8080
 
